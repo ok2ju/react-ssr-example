@@ -2,7 +2,7 @@
 
 The main intention of this project is to show how SSR works under the hood. For production I would recommend to use next.js or gatsby.
 
-Also you can read explanation article [here](./README.md)
+Also you can read explanation article [here](./ARTICLE.md)
 
 To test server side fetching disable javascript in browser:
 1. Go to developer tools;
