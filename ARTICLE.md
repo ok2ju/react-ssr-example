@@ -14,19 +14,19 @@ This article serves as a brief synopsis of existing techniques for rendering web
 
 ### Server side rendering
 
-Server rendering generates the full HTML for a page on the server in response to navigation. This avoids additional round-trips for data fetching and templating on the client, since it’s handled before the browser gets a response. Generating HTML happens on-demand, as the user navigates to different urls [1].
+Server rendering generates the full HTML for a page on the server in response to navigation. This avoids additional round-trips for data fetching and templating on the client, since it’s handled before the browser gets a response. Generating HTML happens on-demand, as the user navigates to different urls [[1]](#ref-1).
 
 ### Client side rendering
 
-Client-side rendering (CSR) means rendering pages directly in the browser using JavaScript. All logic, data fetching, templating and routing are handled on the client rather than the server [1].
+Client-side rendering (CSR) means rendering pages directly in the browser using JavaScript. All logic, data fetching, templating and routing are handled on the client rather than the server [[1]](#ref-1).
 
 ### Rehydration
 
-This approach attempts to smooth over the trade-offs between Client-Side Rendering and Server Rendering by doing both. Navigation requests like full page loads or reloads are handled by **a server** that renders the application to HTML, then the JavaScript and data used for rendering is embedded into the resulting document after that “picks up” by rendering again **on the client** using a technique called **(re)hydration** [1].
+This approach attempts to smooth over the trade-offs between Client-Side Rendering and Server Rendering by doing both. Navigation requests like full page loads or reloads are handled by **a server** that renders the application to HTML, then the JavaScript and data used for rendering is embedded into the resulting document after that “picks up” by rendering again **on the client** using a technique called **(re)hydration** [[1]](#ref-1).
 
 ### Prerendering
 
-Prerendering is a technique that you use **a renderer** to pre-render your CSR app and response ready-to-rendered viewable HTML output to page requests. The prerendering process can happen at build time, runtime or on schedule using local tools or remote services [2]. This approach solves a known critical problem that CSR apps are not behave well on search engines (not SEO friendly).
+Prerendering is a technique that you use **a renderer** to pre-render your CSR app and response ready-to-rendered viewable HTML output to page requests. The prerendering process can happen at build time, runtime or on schedule using local tools or remote services [[2]](#ref-2). This approach solves a known critical problem that CSR apps are not behave well on search engines (not SEO friendly).
 
 There are several types of prerendering techique:
 * Prerendering at build time;
@@ -110,5 +110,5 @@ Sequence diagram to illustrate whole flow:
 
 ## References
 
-* [1] [“Rendering on the Web”](https://developers.google.com/web/updates/2019/02/rendering-on-the-web). Google Developers.
-* [2] [“On the incompleteness of prerendering”](https://ageek.dev/prerendering). AGeek Dev
+* <a id="ref-1"></a>[1] [“Rendering on the Web”](https://developers.google.com/web/updates/2019/02/rendering-on-the-web). Google Developers.
+* <a id="ref-2"></a>[2] [“On the incompleteness of prerendering”](https://ageek.dev/prerendering). AGeek Dev
